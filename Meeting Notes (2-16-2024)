@@ -1,0 +1,41 @@
+(2-16-2024)
+
+(Proposal Review, Design Doc setup)
+
+(Current Tasks)
+
+* Task 1: Project Proposal (regrade edits ongoing)
+
+Waiting on TA notes to improve submission. Choice between buck converter or Lin-Reg needed for analysis.
+
+* Task 2: Design Document (ongoing)
+
+Group looked over the sample from course site. Agreed on proactive work after result of Project Proposal.
+
+* Task 3: Antenna Research (ongoing)
+
+Ben gave Manas good feedback on current antenna search. Addressed the following.
+1) what range is expected eg a few hundred meters for this project or very long range?
+2) any power limitations ?
+3) Within 433 MHz also many types of antennas available. Can discuss as a team and select a few (to get further info).
+
+1) 5 Miles at max range roughly
+2) clarified power needs, specifically about working voltage
+3) Types of antennas based on board connection and length were discussed.
+
+* Task 4: Ki-Cad Repo Population (starting)
+
+Max will begin populating Ki-cad repo with needed libs and files not native to ki-cad.
+
+* Task 5: Repo setup (Complete)
+
+Ben setup and walked group through repo organization. Should allow for well maintained file history and organization.
+
+(Budget Updates)
+
+No updates currently
+
+(Conclusion)
+
+Group got a good wake up call in terms of expected writing rigor for course. Proactive work on project research and documentation is needed and will be beneficial to grade and success further along.
+
