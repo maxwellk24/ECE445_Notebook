@@ -9,7 +9,7 @@ An idea I've been wanting to do for a while is a handheld rocket tracker. I was 
 ![Image](telemetrum.jpg)  
 Source: https://altusmetrum.org/TeleMetrum/
 
-I also found this solution online: [Link][https://www.apogeerockets.com/Electronics-Payloads/Rocket-Locators/Simple-GPS-Tracker]. Pretty cool idea but super expensive and clunky:
+I also found this solution online: [Link](https://www.apogeerockets.com/Electronics-Payloads/Rocket-Locators/Simple-GPS-Tracker). Pretty cool idea but super expensive and clunky:
 * To change frequency, you have to open the casing and flip a bunch of switchees
 * To navigate the menu, the user has to flip/twist teh device around (making use of the internal accelerometer)...not intuitive at all.
 * Very expensive ($475).
@@ -26,6 +26,8 @@ My idea is to create a more affordable, more intuitive versin of this device.
 
 # 02/05/2024
 Proposal and team contract. We've voted to have me as the leader for the time being. I'm most familiar with the project, so I can get the ball rolling/guide the rest of the team. We haven't decided if I'll keep this role.
+
+Our meeting this week was getting a Bill Of Materials (BOM). This will significantly help us in ordering parts/designing our PCB moving forward. The BOM can be found [here](https://docs.google.com/spreadsheets/d/1sEjC53fU_5GEq1jBt58OX4yNWLMCd0l3RfI5yEBmx-o/edit?usp=sharing]).
 
 
 # 02/12/2024
@@ -78,12 +80,16 @@ Placeholder GPS loop code found in the gps_dev branch:
 Components are in. We've met to divvy-up tasks. I'm tasked with getting the screen and GPS working. 
 
 ## Screen: 
+I'm using the [Adafruit GFX](https://learn.adafruit.com/adafruit-gfx-graphics-library/overview) and [Adafruit SSD1306](https://github.com/adafruit/Adafruit_SSD1306) libraries (The 1306 chip is the driver for the display). The screen we're using is the [Adafruit SHARP Memory Display Breakout](hhttps://www.adafruit.com/product/3502?gad_source=1&gclid=Cj0KCQiAh8OtBhCQARIsAIkWb69EURgM6rmca89h0awIIWxgg5zLOwVgstbSv928fPMusonH9j-yh3AaAjCxEALw_wcB) seen in the picture below. It's pretty small, but it gets the job done. I got it working with some dummy code below.
 
+On the left is the "compass". Right now it's just a dot, which acts as the center, and a line, which acts as an "arrow". Line points in the direction of the beacon. In the top right I have the distance readout from the handheld tracker to the beacon in meters.
+
+![Image](compass_first_working.webp)  
 
 ## GPS
 GPS has been pretty easy. The placeholder code from above works great. This was an example pulled from the [Sparkfun Library](https://github.com/sparkfun/SparkFun_Ublox_Arduino_Library?utm_source=platformio&utm_medium=piohome). With some slight modifications to the code, I can save the *longitude* and *latitude* into global variables. the `getLongitude()` and `getLatitude()` return longs, which outputs coordinates like this: `Lat: 401143435, Long: -882273428` Instead of how they would normally be seen, like this: `Lat: 40.1143435, Long: -88.2273428`. Not a huge deal, just need to convert to floats and divide by 10000000.
 
-I've noticed that the GPS library takes up a TON of memory: 
+I've noticed that the GPS library takes up a TON of memory. During compilation, the GPS code takes up **76%** of our available RAM.
 
 ## Distance between two coordinates
 To calculate the distance between two points I'm using the [TinyGPSPlus Library](https://github.com/mikalhart/TinyGPSPlus). This library has a great function called `distanceBetween(double lat1, double long1, double lat2, double long2)`, which takes the latitude and longitude of two points, and calculates the distance between *accounting for the curviture of the earth*. This is incredibly useful considering our desired accuracy of 5 meters. This will come in handy for distances of a mile+.
@@ -117,6 +123,9 @@ avrdude: stk500_getsync() attempt 9 of 10: not in sync: resp=0xe0
 avrdude: stk500_getsync() attempt 10 of 10: not in sync: resp=0x66
 Problem uploading to board.  See https://support.arduino.cc/hc/en-us/sections/360003198300 for suggestions. 
 
+**MAX KRAMER** met several times this week to figure out what was going on. It turns out that our external 16MHz clock was not oscillating. We tried to work around this by removing the 16MHz clock and tried using the internal 8MHz. Again, we got the same error as above.
+
+Our schematic for the MCU is almost identical to schematics we found online (of working projects AND Arduino's official website). After meeting several times and having no luck, we decided to omit the MCU on the PCB, and instead focus on the core features of our project.
 
 
 # 03/25/2024
