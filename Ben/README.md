@@ -11,7 +11,7 @@ Source: https://altusmetrum.org/TeleMetrum/
 
 I also found this solution online: [Link](https://www.apogeerockets.com/Electronics-Payloads/Rocket-Locators/Simple-GPS-Tracker). Pretty cool idea but super expensive and clunky:
 * To change frequency, you have to open the casing and flip a bunch of switchees
-* To navigate the menu, the user has to flip/twist teh device around (making use of the internal accelerometer)...not intuitive at all.
+* To navigate the menu, the user has to flip/twist the device around (making use of the internal accelerometer)...not intuitive at all.
 * Very expensive ($475).
 
 ![Image](handheld_tracker.jpg)  
@@ -129,30 +129,74 @@ Our schematic for the MCU is almost identical to schematics we found online (of 
 
 
 # 03/25/2024
-Integration memory issues
+Met this week to discuss the work **MANAS** has done on the menu so that I can start integrating everything together. Below is the general outline of the menu Manas designed.
 
-
-
-
-
-# 04/01/2024
 ![Image](manas_menu_outline.webp)
 
-Implemented menu
+This is a pretty good outline, however the code that was written was never actually tested, so unfortunately it didn't work. This was pretty frustrating considering the amount of time Manas had spent on it (it's just a simple menu). I asked if he had done any debugging, and he said that no, he had never actually uploaded and tested on the Arduino. 
 
-manas not doing work part 2
+The core idea of the menu was there, and I could easily follow the outline Manas made, so I ended up rewriting the code myself. Again, this was incredibly frustrating considering the time I had spend testing the other components/making sure they work, and he never tested the code once. While I fixed this code, I tasked Manas with getting the radio code up and running. He was given the radio and arduino for testing.
 
+Here are the final results of the menu:
+## Main Menu
+![Image](initial_menu_crop.jpg)
 
-# 04/15/2024
-Broke screen
-Mock Demo
+## Compass
+![Image](compass_crop.jpg)
+
+## Frequency Change Menu
+![Image](freq_change_menu_crop.jpg)
+
+## Editing Frequency
+![Image](changing_frequency_crop.jpg)
+
+## Attempting Frequency Change
+![Image](attempting_freq_change_crop.jpg)
+
+## Frequency Change Success
+![Image](freq_change_success_crop.jpg)
+
+# 04/01/2024 - 04/15/2024
+Everything is working in isolation, so we need to integrate all together to prepare for the Mock Demo. I'll be in charge of this.
+
+## Radio Testing
+Huge thanks to **Max Kramer** for finishing the radio code. Since last week, Manas was unable to get the radios to work. As it turns out, he didn't have a bread board, and never actually tested the radio module (As of Tuesday). On Tuesday he picked up a new breadboard and went to work. We met again on Friday, and he hadn't gotten the code working (after checking the git, he had not made any changes. This led us to believe he didn't do anything, so Max finished the code instead).
+
+Max got the radio code working, and we did some general range/frequency change testing on eng quad. This was primarily Max doing the testing. I was mostly there to hold radios while he tweaked the code.
+
+## Memory Issues
+I mentioned this a couple weeks ago, but the GPS library takes up over 76% of our RAM (1560 bytes). This is a problem because our display requries 1KB (50%) of our RAM to operate.
+
+It turns out that the SparkFun GPS library is designed to cover ALL their gps devices (they make several). This wasn't really meant to be efficient, it was just meant to get the job done. There are debug print statements throughout the entire library (which take up a TON of memory), and there are dozens of global variables. Many of these global variables are longs/uint32_t's, which take up a lot of space. I went through and deleted all these unneeded variables/functions/prints.
+
+The new memory size of the gps is only 42% of our RAM, which I think is as small as I'm going to get it. This is small enough to integrate our menu, display, and gps code all on one atmega chip.
+
+## Mock Demo
+Mock demo went well. We just need to improve some of our radio/change requency functions and we should be good for final demo. Sanjana also suggested getting a case for our project, even if it's just on a breadboard.
 
 
 # 04/22/2024
-Broke screen
+This week has mainly been prepping for the final demo. Cleaning up code, finalizing integration, and building the case.
 
-3D modeling
+## We broke the screen
+Somehow while transporting the project I damaged the display. The corner of the display cracked, and now data won't display unless you push on the screen in a very particular way (and even then it doesn't really work).
 
-Laser cut cases
+![Image](broken_screen.jpg)
 
-Final Demo
+I called up a friend who's using a similar display on a personal project. He let us borrow his display for the final demo. Lucky for us, it actually uses the same Adafruit_GFX library that we used for our original display. 
+
+We've gone from a 128x32 pixel display to a 400x240 pixel display (WAY BETTER RESOLUTION). Seen below. The logic for all the menus remains the same, we just had to adjust sizing and text thickness. 
+
+![Image](new_display.jpg)  
+^Source: [Adafruit](https://www.adafruit.com/product/4694?gad_source=1&gclid=Cj0KCQjw0MexBhD3ARIsAEI3WHKC6rK1eA4tJuoVFEdSgEgJBttDaHFF8nRq-e7qUTQ-WK-mqFdtqH8aAtFxEALw_wcB)
+
+## 3D modeling/Laser cut case
+The project completely works on breadboards. We just need do design the casing. I'm not very good at 3D design, so I use a simple online 3D design tool called onshape. It's pretty easy to use and its free (plus tons of tutorials online). I'm using it to CAD each side of our box, which will be laser cut from a 1/4inch plank of ply wood. Here are a few screenshots of our cases:
+
+## Tracker Case
+![Image](tracker_case.png)  
+
+## Beacon Case
+![Image](beacon_case.png)  
+
+Once I finished the designs for each wall face, I used the laser cutter in Siebel to cut out each face. Max and I used hot glue guns to attach the edges together.
