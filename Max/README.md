@@ -30,3 +30,11 @@ Ben is working on UI and MCU while Manas works on Sensors and Communication.
 Focusing this week on Design Document and Review assignments. We have had some workload issues with Manas. So far he has not shown much technical work ability. His involvement in the design doc has been low, with minimal written work despite the remaining time we have. Ben and I also have reviewed his work thus far and have some concerns about copy/paste or even AI tool usage for some work he has done. He has not been able to explain with much confidence the material he has done and does not seem to undertsand a lot of the subsystems he's been assigned, despite the few weeks he's had them.
 
 We had a serious sit down with him to discuss these issues in a professional manner in accord with the team contract. He denied any practices that violated any guidlines. Ben and I have discussed privately that we will discuss this matter with the TA soon.
+
+# 02/26/2024
+
+Mainly working on PCB design for orders next week. Design review went well though so we have confidence in our current work. My focus besides power will be hardware testing so until parts arrive can't do much. Currently working though getting the order put together. 
+
+Digikey order to get the GPS units should go out this week.
+
+
