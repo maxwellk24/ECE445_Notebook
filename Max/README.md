@@ -37,4 +37,10 @@ Mainly working on PCB design for orders next week. Design review went well thoug
 
 Digikey order to get the GPS units should go out this week.
 
+# 03/04/2024
 
+Final PCB push this past weekend. Files for the tracker board were submitted.
+
+(**INSERT PIC #2 HERE**)
+
+GPS units are in for testing. We met to get some more tasks divided between us. I'm gonna be working on power testing as well as general board testing and solder work when more parts and boards arrive.
