@@ -49,4 +49,10 @@ GPS units are in for testing. We met to get some more tasks divided between us. 
 
 Spring break so no work done
 
+# 03/18/2024
+
+Our tracker boards have been delivered. Beacon boards will be worked on later as we just need to remove the UI and re-organize the PCB.
+
+I did some testing with the actual boards to check traces and ensure we have proper continuity between all nets and pads. Otherwise I did not do much work this week. Other classes and developments in my job hunt have needed my attention. Further parts orders and testing will be done soon as I can.
+
 
