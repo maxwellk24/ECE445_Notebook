@@ -16,5 +16,16 @@ We met as a team and brainstormed the sub-systems we would need. Ben seems to be
 1.	Battery to power all the parts 
 2.	Sensors to collect GPS locations 
 3.	Micro-processor to run the code
-4.	RF (Telemetry) module – for signal transmission 
+4.	RF (Telemetry) module – for signal transmission
+
+# Feb 4 : Telemetry Design – Antenna basics and frequency band
+ 
+Went through a few links to understand basic features of antennas, frequency bands that antennas can use. There seem to be a lot of things to take into account while picking the exact antenna needed for our project. I asked for Ben’s input on how to make a selection, and he said that he had experience working with LoRa in the past, and would like me to research antennas that would work with it. Went through relevant antenna options for our use case.
+Description of Long Range antennas (LoRa) and long range communication. Battery requirements details for these antennas.
+
+1.	https://www.electricity-magnetism.org/yagi-uda-antennas/#:~:text=Applications%20of%20Yagi%2DUda%20Antennas,signal%20strength%20is%20relatively%20weak
+2.	https://www.linkedin.com/pulse/how-choose-best-antenna-lora-ct-rf-antennas-inc/
+3.	https://lcantennas.com/8-dbi-antenna-lora-high-gain-antenna/
+
+
 
