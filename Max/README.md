@@ -63,5 +63,14 @@ Tracker PCB work has started, will be ready for 4th round next week.
 
 SMD parts from TA were in the friday of this week. Solder work to get them on will be done this weekend.
 
+# 04/01/2024
+
+Adafruit parts, including screen and radios are in. Also have ATMega's in as well. I'm soldering the microprocessor so Ben can test upload some code in isolation to check our ISP upload method. Essentially, we are using an arduino uno as a programmer instead of an on circuit programmer. This allowed us to save on parts, design time, and cost.
+
+## Upload Issues
+
+We have run into some trouble with the ISP uplad method. It seems unable to connect to the board and upload no matter what we do. Ben and I have traded the uno and board with the ATMega this week and have not been able to resolve it. This seems to be some sort of clock issue. The crystal oscillator is attactched with its capacitors so the extrenal clock should be running. This may continue to next week.
+
+This is currently my main focus along with power testing
 
 
