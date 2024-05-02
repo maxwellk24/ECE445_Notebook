@@ -11,4 +11,16 @@ Met with Ben and agreed oon general idea and being group mates. Ben seems to hav
 
 Since last week we've looked for and gotten a new teammate with Manas Tiwari. Currently, work is just for homework, project remains in brainstorming stage.
 
+# 02/12/2024
 
+Discussed with machine shop and were suprisingly told our plans for a 3d-printed casing for our devices was the best route. Proposal document was submitted as well for our general idea.
+
+Moved onto initial PCB work. I've been asked to focus on the power subsystem for now, with possible work in other subsystems after.
+
+After some reserach and TA consultation we'll be going with a buck convertor over a linear regulator. This is due to heating concerns as the rocket launch may overheat the beacon device.
+
+Since all other systems will run on 3.3V we will chose the adafruit LM3671 3.3V Buck Convertor for our devices.
+
+(**INSERT PIC #1 HERE**)
+
+Ben is working on UI and MCU while Manas works on Sensors and Communication.
