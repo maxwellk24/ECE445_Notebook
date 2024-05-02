@@ -21,7 +21,7 @@ After some reserach and TA consultation we'll be going with a buck convertor ove
 
 Since all other systems will run on 3.3V we will chose the adafruit LM3671 3.3V Buck Convertor for our devices.
 
-(**INSERT PIC #1 HERE**)
+![alt_text](https://github.com/maxwellk24/ECE445_Notebook/blob/main/Max/%231%20(power%20subsystem).PNG)
 
 Ben is working on UI and MCU while Manas works on Sensors and Communication.
 
@@ -41,7 +41,7 @@ Digikey order to get the GPS units should go out this week.
 
 Final PCB push this past weekend. Files for the tracker board were submitted.
 
-(**INSERT PIC #2 HERE**)
+![alt_text](https://github.com/maxwellk24/ECE445_Notebook/blob/main/Max/%232%20(tracker%20pcb).PNG)
 
 GPS units are in for testing. We met to get some more tasks divided between us. I'm gonna be working on power testing as well as general board testing and solder work when more parts and boards arrive.
 
@@ -81,7 +81,7 @@ Uploading to board continues to fail. We are considering a potential abandonment
 
 The Convertor seems to be having issues. The output stays at 0.0033V or ambiant voltage no matter input combo. The convertor has 4 pins. Vin, GND, 3V, and EN as shown below. I powered using the 5V out of an arduino board and the LiPo batteries we plan to use. Neither has worked. The breakout board it comes on seems to have EN (enable) set high with the Vin net but this shouldn't stop it. Replacements have been oreded in case this is a part malfunction.
 
-(**INSERT PIC #3 HERE**)
+![alt_text](https://github.com/maxwellk24/ECE445_Notebook/blob/main/Max/%233%20(buck%20converter).PNG)
 
 ## Software
 
