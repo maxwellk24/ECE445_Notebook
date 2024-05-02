@@ -58,7 +58,7 @@ This week has been mostly Design Document and Presentation work. Unfortunately w
 
 We brought up these concerns with Manas in a professional manner. We allowed him to defend himself, and he denied using chatGPT to get his answers.
 
-I can excuse not being knowledgeable on this subject (RF is new to everyone on this project), but I can't excuse cheating. I can't allow this kind of material on my project, as it could result in consequences from the department. Max and I had to commit considerably more time to the project than we had planned (doing Manas's work on top of our own), which was ver frustrating. We will bring this up with the TA if it continues to be an issue...
+I can excuse not being knowledgeable on this subject (RF is new to everyone on this project), but I can't excuse cheating. I can't allow this kind of material on my project, as it could result in consequences from the department. Max and I had to commit considerably more time to the paper than we had planned (doing Manas's work on top of our own), which was ver frustrating. We will bring this up with the TA if it continues to be an issue...
 
 
 # 02/26/2024
@@ -77,7 +77,7 @@ Placeholder GPS loop code found in the gps_dev branch:
     
 
 # 03/04/2024
-Components are in. We've met to divvy-up tasks. I'm tasked with getting the screen and GPS working. 
+We've met to divvy-up tasks. I'm tasked with getting the screen and GPS working. 
 
 ## Screen: 
 I'm using the [Adafruit GFX](https://learn.adafruit.com/adafruit-gfx-graphics-library/overview) and [Adafruit SSD1306](https://github.com/adafruit/Adafruit_SSD1306) libraries (The 1306 chip is the driver for the display). The screen we're using is the [Adafruit SHARP Memory Display Breakout](hhttps://www.adafruit.com/product/3502?gad_source=1&gclid=Cj0KCQiAh8OtBhCQARIsAIkWb69EURgM6rmca89h0awIIWxgg5zLOwVgstbSv928fPMusonH9j-yh3AaAjCxEALw_wcB) seen in the picture below. It's pretty small, but it gets the job done. I got it working with some dummy code below.
