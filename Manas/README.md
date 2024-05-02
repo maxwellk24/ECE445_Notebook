@@ -167,7 +167,7 @@ Initialization not working on the breadboard. Using pinout from https://learn.ad
 # Apr 10 : Overall progress - Status
 
 Individual components seem to be working. Max has taken charge of the LoRa work due to the time crunch and has got it working. Working on integrating all subsystems into one solution.
-![image](https://github.com/maxwellk24/ECE445_Notebook/assets/51966065/904702a7-630d-4083-8a70-f22bc75c3810)
+
 
 
 
