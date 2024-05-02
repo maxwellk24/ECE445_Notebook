@@ -9,5 +9,12 @@ It seems to be better to prioritize looking for the right partners. Posted that 
 
 Exchanged messages with Max to join their idea “Handheld Rocket Tracking”. This handheld device will have a GPS + Magnetometer + transmitter/receiver. With the sensors, the handheld will be able to receive the location of the puck in rocket, relative to itself, as well as the user's heading. Some concerns on where I would fit into this project considering I have limited experience in this field, but hoping we can work it out. Project has early-approval - Team #16
 
+# Feb 1 : Team Meet - Identify major parts of project and assignment
 
+We met as a team and brainstormed the sub-systems we would need. Ben seems to be the most knowledgeable about the project. Suggested sub-systems in meeting are  –
+
+1.	Battery to power all the parts 
+2.	Sensors to collect GPS locations 
+3.	Micro-processor to run the code
+4.	RF (Telemetry) module – for signal transmission 
 
