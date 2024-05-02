@@ -55,4 +55,13 @@ Our tracker boards have been delivered. Beacon boards will be worked on later as
 
 I did some testing with the actual boards to check traces and ensure we have proper continuity between all nets and pads. Otherwise I did not do much work this week. Other classes and developments in my job hunt have needed my attention. Further parts orders and testing will be done soon as I can.
 
+# 03/25/2024
+
+Other parts orders put in, should arrive next week. More board tsting shows everything is working well. I'm currently waiting for the rest of the hardware in order to continue my responsibilities. Ben has let me know for the moment that software should be ok for now so I'm not needed elsewhere.
+
+Tracker PCB work has started, will be ready for 4th round next week.
+
+SMD parts from TA were in the friday of this week. Solder work to get them on will be done this weekend.
+
+
 
