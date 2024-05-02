@@ -89,15 +89,13 @@ Ben also made me aware of some work challenges with Manas again. It seems he has
 
 Simple RX/TX code was available at LoRa forums for testing the funcionality of the radio. After looking up the arduino uno pin mapping to hook up to the radio, I got RX and TX working (with dummy values as I had the single radio at this point). This only took an afternoon for setup and code testing to get started.
 
-As I understand it Ben has library issues he's handling while core functionality of every subsystem seems to be working in isolation. Consolidation to a breadboard prototype is next phase after further radioo work.
+As I understand it Ben has library issues he's handling while core functionality of every subsystem seems to be working in isolation. Consolidation to a breadboard prototype is next phase after further radio work.
 
 # 04/15/2024
 
 ## Radio
 
-Work going well, we were able to get one way communication from beacon to tracker working with outline we had. We reversed and also got tracker to beacon working. The beacon sends GPS data while the Tracker sends frequency changes. What we have left is to get constant 2-way RXTX up. This was actually a larger challenge than originally thought. The data packets we send using the LoRa library commands are actually clogging both devices and preventing receives to happen when 2-way is up. To fix this we set data transmissions to occur once at a set time interval and to have the devices constantly listen otherwise.
-
-After some testing by the NHB near the union we got fully 2-way communcation working! This was confirmed by Ben standing across Green street and getting accurate distance and direction on the UI. This was even with just using wires as the antennas. Intgration remains the only major obstacle.
+Work going well, we were able to get one way communication from beacon to tracker working with outline we had. We reversed and also got tracker to beacon working. The beacon sends GPS data while the Tracker sends frequency changes. What we have left is to get constant 2-way RXTX up. This was actually a larger challenge than originally thought. The data packets we send using the LoRa library commands are actually clogging both devices and preventing receives to happen when 2-way is up. To try and fix this we set data transmissions to occur once at a set time interval and to have the devices constantly listen otherwise.
 
 ## Group Issues
 
@@ -111,4 +109,30 @@ At this point we jus did not trust his ability to finish any work within our str
 
 For his part, he was understanding of our position and we agreed to move forward as stated above.
 
+# 04/22/2024
 
+Final demo for us was Friday and outdoors, as stated in our design docs.
+
+We did face a few last challenges...
+
+## Screen
+
+The original screen we had broke between testing sessions. The solder connections tore and there was a chip in the left bottom corner of the screen. We aquired a spare from a friend of Ben's. He integrated the screen with some siple but tedious code rewrites while I still worked on radio testing and fine tuning.
+
+## Radio
+
+After some testing by the NHB near the union we got fully 2-way communcation working! This was confirmed by Ben standing across Green street and getting accurate distance and direction on the UI. This was even with just using wires as the antennas. Intgration remains the only major obstacle.
+
+## Integration
+
+At this point integration was all that remained. Ben and I worked a lot of long nights this week to consolidate our code and test. After a while we got everything together on a single file for both devices. 
+
+Testing was tedious. Final testing showed that some unseen errors were hampering consistent connection. After a lot of debugging we found that there were faulty net lines in the breadboards we used and this was causing the tracker radio to not properly receive data.
+
+## Casing
+
+We did make some basic 3D laser cut casing. Ben provided some old wood for to use. The design was simple enough, just rough dimensions to house the breadboards in rectangular house with connection holes drilled into them. The Tracker did have extra holes laser cut to allow for screen and button access.
+
+# FINAL NOTES
+
+This was a fun project despite the technical challenges we faced. The wide range of domains we explored like RF were fun to work with. I'm glad Ben mentioned this project, I think had we had another semester to work on this it could be a very succesful product.
