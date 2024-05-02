@@ -132,6 +132,42 @@ Some menu options may not be required. Discussed limiting the frequency selectio
 The board has only 3 buttons for going Up, Down and Enter. 
 
 ![](Picture3.png)
+![](Picture4.png)
+
+
+# Apr 1 : Pseudo Code for Menu navigation and Info Display
+
+Poll the 3 input buttons constantly, in a loop to know which button is selected by the user.
+Depending on user selection (Enter) -> show the Distance and Direction info 
+Or allow Menu Navigation (Up / Down / Back)
+If Frequency Change option selected –> Allow numeric input from the user
+I have identified the required libraries – Arduino.h , Wire.h , Pins.h 
+Implemented the methods in main.cpp and I have all the basic functions working.
+Testing and debugging pending on the actual Arduino. I have been running into issue after issue getting the code to upload to the Arduino board. Keeping time in mind, I’ve tested functionality by simulating button presses in software. Navigation working as expected. Will try to get Ben’s help on testing on the actual Arduino.
+
+
+
+# Apr 6 : Telemetry – Modules for RF chip
+Submitted my menu navigation code. Ben has requested that I take charge of writing code regarding LoRa communication. He has given me the chip I will be working with. Identified compatible programming modules to work with AdaFruit RFM9x chip e.g. LoRaLib, Circuit Python, RadioHead Packet Radio library for embedded microprocessors. Actual functionality doesn’t seem very complicated since most of the functions to use LoRa are built in.
+Suggested flow of work for Beacon: LoRa.begin() – LoRa.transmit().
+Flow for work for Tracker: LoRa.begin() – LoRa.recieve() with capability of set_frequency().
+Currently trying to model from example code from https://github.com/sandeepmistry/arduino-LoRa/blob/master/examples/LoRaDuplex/LoRaDuplex.ino#L36. 
+This code is using interrupts to know when to transmit data. Need to confirm with Ben on whether this is the expected behavior.
+
+![](Picture1.png)
+
+![](Picture2.png)
+
+
+# Apr 9 : Telemetry Board – Coding issues
+Code which I had written was not configured for SPI. Integrating the current code with SPI requires significant modification of the library being used. Spoke about this with the group, and the best solutions seems to be moving from the current library to a different library. 
+Initialization not working on the breadboard. Using pinout from https://learn.adafruit.com/adafruit-rfm69hcw-and-rfm96-rfm95-rfm98-lora-packet-padio-breakouts/pinouts doesn’t seem to be working. Might be a potential wiring issue since the initialization steps itself aren’t working. Will need some help to debug this. I feel like I’m doing all the steps correctly. 
+
+
+# Apr 10 : Overall progress - Status
+
+Individual components seem to be working. Max has taken charge of the LoRa work due to the time crunch and has got it working. Working on integrating all subsystems into one solution.
+![image](https://github.com/maxwellk24/ECE445_Notebook/assets/51966065/904702a7-630d-4083-8a70-f22bc75c3810)
 
 
 
