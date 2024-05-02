@@ -73,4 +73,42 @@ We have run into some trouble with the ISP uplad method. It seems unable to conn
 
 This is currently my main focus along with power testing
 
+# 04/08/2024
+
+Uploading to board continues to fail. We are considering a potential abandonment of the PCB but will consult with our TA at mock demo before doing so completely. Ben and Manas hav been doing the heavy lifting for software at the moment. I have moved to power testing fully. Remaining SMD parts and beacon board are incoming this week as well.
+
+## Power
+
+The Convertor seems to be having issues. The output stays at 0.0033V or ambiant voltage no matter input combo. The convertor has 4 pins. Vin, GND, 3V, and EN as shown below. I powered using the 5V out of an arduino board and the LiPo batteries we plan to use. Neither has worked. The breakout board it comes on seems to have EN (enable) set high with the Vin net but this shouldn't stop it. Replacements have been oreded in case this is a part malfunction.
+
+(**INSERT PIC #3 HERE**)
+
+## Software
+
+Ben also made me aware of some work challenges with Manas again. It seems he has had little technical work/success so far and the radio system is far behind. With PCB on hold and power parts being delivered I am switching over to radio testing and code.
+
+Simple RX/TX code was available at LoRa forums for testing the funcionality of the radio. After looking up the arduino uno pin mapping to hook up to the radio, I got RX and TX working (with dummy values as I had the single radio at this point). This only took an afternoon for setup and code testing to get started.
+
+As I understand it Ben has library issues he's handling while core functionality of every subsystem seems to be working in isolation. Consolidation to a breadboard prototype is next phase after further radioo work.
+
+# 04/15/2024
+
+## Radio
+
+Work going well, we were able to get one way communication from beacon to tracker working with outline we had. We reversed and also got tracker to beacon working. The beacon sends GPS data while the Tracker sends frequency changes. What we have left is to get constant 2-way RXTX up. This was actually a larger challenge than originally thought. The data packets we send using the LoRa library commands are actually clogging both devices and preventing receives to happen when 2-way is up. To fix this we set data transmissions to occur once at a set time interval and to have the devices constantly listen otherwise.
+
+After some testing by the NHB near the union we got fully 2-way communcation working! This was confirmed by Ben standing across Green street and getting accurate distance and direction on the UI. This was even with just using wires as the antennas. Intgration remains the only major obstacle.
+
+## Group Issues
+
+It should noted that at this point Manas has not been able to deliver any technical progress beyond some simple button input parsing for the UI, which Manas admitted to not testing before handing it off.
+
+We had another serious sit down with him. Ben and I have essentially picked up all technical work and Manas has not been involved much. We had a team meeting and discussed these concerns and frustrations.
+
+Essentially, after the issues with the design document Manas showed improved commitment to the team and we gave the benefit of the doubt. When we assigned him the UI and radio work we decided not to look over his shoulder. At team meetings he explained that he was working on his tasks and would consult if needed. As Ben and I had our own work and class load we left it there. However, as seen above the work he finished was not much.
+
+At this point we jus did not trust his ability to finish any work within our strained deadlines. We did explain this choice and all other concerns to him in a professional manner. He explained to us that he was out of his depth in terms of technical knowledge and that he had been having trouble completing tasks due to mental health challenges, for which he has DRES accomodations for.
+
+For his part, he was understanding of our position and we agreed to move forward as stated above.
+
 
