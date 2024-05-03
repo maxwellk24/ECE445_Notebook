@@ -20,16 +20,16 @@ We met as a team and brainstormed the sub-systems we would need. Ben seems to be
 
 # Feb 4 : Telemetry Design – Antenna basics and frequency band
  
-Went through a few links to understand basic features of antennas, frequency bands that antennas can use. There seem to be a lot of things to take into account while picking the exact antenna needed for our project. I asked for Ben’s input on how to make a selection, and he said that he had experience working with LoRa in the past, and would like me to research antennas that would work with it. Went through relevant antenna options for our use case.
-Description of Long Range antennas (LoRa) and long range communication. Battery requirements details for these antennas.
+Went through a few links to understand basic features of antennas, frequency bands that antennas can use. There seem to be a lot of things to take into account while picking the exact antenna needed for our project. I asked for Ben’s input on how to make a selection (since he said that he had experience working with LoRa antennas in the past). He confirmed that most antenna options would work, and would like me to research antennas that seem best fit for our project. Went through relevant antenna options for our use case.
+Few links with description of Long Range antennas (LoRa) and long range communication.
 
 1.	https://www.electricity-magnetism.org/yagi-uda-antennas/#:~:text=Applications%20of%20Yagi%2DUda%20Antennas,signal%20strength%20is%20relatively%20weak
 2.	https://www.linkedin.com/pulse/how-choose-best-antenna-lora-ct-rf-antennas-inc/
 3.	https://lcantennas.com/8-dbi-antenna-lora-high-gain-antenna/
 
-# Feb 6 : Proposal info - LoRa antenna features
+# Feb 6 : Proposal info - LoRa antenna features and Schematic work
 
-Ben is taking charge of designing the PCB schematics with Max helping him to do so. KiCAD not running properly on my laptop, which limited the amount I could help with.
+Ben is taking charge of designing the PCB schematics with Max helping him to do so. KiCAD not running properly on my laptop, which limited the amount I could help with. Still did some editing of the UI schematic to add push buttons to the current design.
 Working on adding telemetry in the proposal document.
 
 Spoke to an antenna manufacturer (lcantennas) to get cost and time for order etc.
@@ -39,8 +39,6 @@ Draft proposal sections for my section is ready. Below links also used to get mo
 2.	https://www.apogeerockets.com/Electronics-Payloads/Electronics-Accessories/433-Mhz-Yagi-Antenna
 3.	https://www.data-alliance.net/433mhz-antennas/
 4.	[https://lcantennas.com/how-to-choose-the-best-antenna-for-lora/
-
-
 
 
 # Feb 8 : Revision and Submission of Proposal
@@ -56,13 +54,13 @@ Met as team to go over the team contract, added a few sections.
 We revised and agreed on each sections, assignments and options to resolve issues.
 
 Submitted final version of Team contract – my part Telemetry, antenna specs.
-I proposed taking up any more modules as we progress.
+I proposed taking up any more software related modules as we progress.
 
 
 # Feb 16 : Telemetry Design – Alternatives for LoRa Antennas (frequency, gain, range)
  
 Went through below links to get more info and find alternatives. Discussed with the team to finalize. Read testing details and alternatives for antenna.
-Frequency band selection – 433 MHz, Gain and Longer range
+Frequency band selection – 433 MHz. The other frequency range for LoRa (915 MHz) seems to be reserved for international teams' use.
 
 1.	https://www.raypcb.com/lora-antenna/#:~:text=The%20most%20prevalent%20LoRa%20antennas,collinear%20antennas%20also%20see%20use
 2.	https://www.electricity-magnetism.org/yagi-uda-antennas/#:~:text=Applications%20of%20Yagi%2DUda%20Antennas,signal%20strength%20is%20relatively%20weak
