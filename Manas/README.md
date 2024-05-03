@@ -163,9 +163,19 @@ Initialization not working on the breadboard. Using pinout from https://learn.ad
 
 
 # Apr 10 : Overall progress - Status
+Individual components besides radio seem to be working. There is some concern regarding GPS performance in cloudy weather. Did some testing around the engineering quad and confirmed screen and GPS functionality in good weather conditions ahead of our mock demo. 
 
-Individual components seem to be working. Max has taken charge of the LoRa work due to the time crunch and has got it working. Working on integrating all subsystems into one solution.
+# Apr 14 : Role reassignment - Radio Component not initializing
+Ben has requested Max to take care of Radio library due to the time crunch of completing before our final demo. I was still facing issues where the LoRa component was not being initialized properly. We made a plan to debug this together and I passed over the code I had currently written. I would be instead focusing on creating the presentation and working on understanding the finer details of the project. 
 
+# Apr 22: Integration Testing - Progress Report
+Max has got the radio component to initialize and transmit data. He resolved the issue by using an easier to understand library for LoRa. Group is working on further integrating all components. 
+
+# Apr 23: Screen Chipping 
+Screen currently in use seems to have been chipped and is unable to display anything. No one has any idea what caused it. Ben is looking to borrow a screen from his friend to use. Code for displaying text won't need to be written entirely but will require the use of drivers used by the new screen. 
+
+# Apr 24: Case printing and Final Testing
+Ben has managed to transfer all our workings onto the new screen. A new chip (Arduino feather) needed to be utilized in order to handle the new screen's larger memory. All components working and testing of individual functions functioning as expected. 3D casing was printed using laser cutting and had a simple design. All seems to be good before the final demo.
 
 
 
